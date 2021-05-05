@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // A double NOT !! is sometimes used for converting a value to boolean type:
+        alert( !!"non-empty string" ); // true
+        alert( !!null ); // false
+
+        // There’s a little more verbose way to do the same thing – a built-in Boolean function:
+        alert( Boolean("non-empty string") ); // true
+        alert( Boolean(null) ); // false
+
+        // Last Exercise - "if" version
+        let inputUser = prompt("Enter your user ID:", 'Accept username ONLY');
+        
+        if (inputUser == "Admin") {
+            let inputPassword = prompt("Please enter your password:");
+            if (inputPassword == "TheMaster") {
+                alert("Welcome, Master!");
+            
+            } else if (inputPassword != "TheMaster") {
+                alert("Wrong Password.");
+            
+            } else {
+                alert("Cancelled");
+            };
+        
+        } else if (inputUser != "Admin") {
+            alert("I don't know you.");
+       
+        } else {
+            alert("Cancelled");
+        };
+
+    </script>
+</body>
+</html>

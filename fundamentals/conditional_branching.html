@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The "if" and '?'</title>
+</head>
+<body>
+    <script>
+        // Exercise 1
+        if ("0") {
+            alert( 'Hello' );
+        }
+
+        // Exercise 2
+        let officialName = prompt("What's the official name of JavaScript?");
+
+        (officialName == 'ECMAScript') ? alert('Right!') : alert('You don\'t know "ECMAScript"!');
+        
+        // Exercise 3
+        let inputNumber = prompt('Enter a number', 0);
+
+        let message = (inputNumber > 0) ? 'The value is greater than 0' :
+            (inputNumber < 0) ? 'The value is less than 0' :
+            'The value is 0' ;
+
+        alert(message);
+
+        // Exercise 3
+        let result = (a + b < 4) ? 'Below' : 'Over';
+
+        // Exercise 4
+        let message = (login == 'Employee') ? 'Hello' :
+            (login == 'Director') ? 'Greetings' :
+            (login == '') ? 'No login' :
+            '';
+
+    </script>
+</body>
+</html>

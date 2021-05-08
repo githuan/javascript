@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 3
+        while (i) { // while (i != 0)
+            alert(i);
+            i--;
+        }
+
+        /* The condition check can be moved below the loop body using the do..while syntax
+        This form of syntax should only be used when you want the body of the loop to execute
+        at least once regardless of the condition being truthy.
+        */
+        let a = 0;
+        do {
+            alert(a);
+            a++;
+        } while (a < 3);
+
+        // The "for" loop
+        for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+            alert(i);
+        }
+        /* begin    i = 0       Executes once upon entering the loop.
+        condition   i < 3       Checked before every loop iteration. If false, the loop stops.
+        body        alert(i)    Runs again and again while the condition is truthy.
+        step        i++         Executes after the body on each iteration. DO NOT forget this
+                                line or an infinite loop will occur.
+        
+        /* Replace "for" with "while"
+        for (let i = 0; i < 3; i++) {
+            alert(`number ${i}`);
+        }
+        */
+        let b = 0;
+        while (b < 3) {
+            alert(`number ${b}`);
+            b++;
+        }
+        
+        // If number larger 100 or input cancel stop.
+        while (true) {
+            let inputNumber = +prompt("Enter a number", '');
+            if (inputNumber > "100" || inputNumber == " " || inputNumber === "") break;
+        }
+        // a better version
+        let num;
+        do {
+            num = prompt("Enter a number greater than 100?", 0);
+        } while (num <= 100 && num);i
+
+        // Last exercise
+        /* For each i in the interval {
+        check if i has a divisor from 1..i
+        if yes => the value is not a prime
+        if no => the value is a prime, show it
+        } */
+        let n = 10;
+
+        nextPrime:
+        for (let i = 2; i <= n; i++) { // for each i...
+        
+          for (let j = 2; j < i; j++) { // look for a divisor..
+            if (i % j == 0) continue nextPrime; // not a prime, go next i
+          }
+      
+          alert( i ); // a prime
+        }
+    </script>
+</body>
+</html>
